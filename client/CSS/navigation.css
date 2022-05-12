@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    margin:0px;
+    padding: 0px;
+}
+
+body{
+    background: #ff6624;
+    background-image: repeating-linear-gradient(60deg,
+    #ff6624,
+    #ff6624 15px,
+    #af3 0,
+    #af3 30px);
+
+}
+h5>a {
+     color: black;
+     text-decoration: none;
+}
+
+a:hover {
+    background-color:  #af3 ;
+    text-decoration: unset;
+    font-weight: bold;
+}
