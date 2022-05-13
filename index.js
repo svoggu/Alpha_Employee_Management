@@ -1,10 +1,19 @@
 import express from "express";
 import cors from "cors";
+import mongoose from "mongoose";
 
 const app = express();
 app.use(cors());
 
 app.use(express.json());
+
+mongoose
+  .connect("mongodb://localhost:27017/alpha_employeedb")
+  .then(() => {
+    console.log("Connected to DB Successfully");
+  })
+  .catch((err) => console.log("Failed to Connect to DB", err));
+
 
 const employees = [
     {
