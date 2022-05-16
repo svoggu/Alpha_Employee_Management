@@ -9,7 +9,7 @@ body {
 }
 table {
   width: 100%;
-  background-color: rgba(9, 113, 161, 0.699);
+  background-color: rgba(9, 113, 161, 0.629);
   color: rgb(211, 219, 226);
 }
 th {
@@ -22,5 +22,5 @@ td {
   padding: 20px;
 }
 tr:nth-child(even) {
-  background-color: rgba(180, 9, 172, 0.5);
+  background-color: rgba(180, 9, 171, 0.414);
 }
