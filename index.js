@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
+import { Employee } from "./employee.schema.js";
 
 const app = express();
 app.use(cors());
@@ -14,28 +15,21 @@ mongoose
   })
   .catch((err) => console.log("Failed to Connect to DB", err));
 
-
-const employees = [
-    {
-        id: 1,
-        name: "John",
-        age: 30,
-        position: "Manager"
-    },
-    {
-        id: 2,
-        name: "Jane",
-        age: 25,
-        position: "Developer"
-    },
-];
-
 app.get("/employees", (req, res) => {
-    res.json(employees);
-});
+    Employee.find()
+        .then((data) => {
+        res.json({data});
+        })
+        .catch((err) => {
+        res.json({err});
+        });
+})
+
 app.get("/employees/:id", (req, res) => {
-    const employee = employees.find(employee => employee.id === parseInt(req.params.id));
-    res.json(employee);
+Employee.findById(req.params.id).then((data) => {
+    res.json({data});
+    console.log(data);
+})
 })
 
 app.listen(3002, () => {
