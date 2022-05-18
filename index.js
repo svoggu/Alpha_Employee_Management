@@ -15,23 +15,44 @@ mongoose
   })
   .catch((err) => console.log("Failed to Connect to DB", err));
 
+app.post("/create-employee", function (req, res) {
+  const { firstname, lastname, email, job, department } = req.body;
+  const emp = new Employee({
+    firstname,
+    lastname,
+    email,
+    job,
+    department,
+  });
+
+  emp
+    .save()
+    .then((data) => {
+      res.json({ data });
+    })
+    .catch((err) => {
+      res.status(501);
+      res.json({ errors: err });
+    });
+});
+
 app.get("/employees", (req, res) => {
-    Employee.find()
-        .then((data) => {
-        res.json({data});
-        })
-        .catch((err) => {
-        res.json({err});
-        });
-})
+  Employee.find()
+    .then((data) => {
+      res.json({ data });
+    })
+    .catch((err) => {
+      res.json({ err });
+    });
+});
 
 app.get("/employees/:id", (req, res) => {
-Employee.findById(req.params.id).then((data) => {
-    res.json({data});
+  Employee.findById(req.params.id).then((data) => {
+    res.json({ data });
     console.log(data);
-})
-})
+  });
+});
 
 app.listen(3002, () => {
-    console.log("Server is running on port 3002");
+  console.log("Server is running on port 3002");
 });
