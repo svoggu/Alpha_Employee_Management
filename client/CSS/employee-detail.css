@@ -1,0 +1,26 @@
+body {
+  padding: 40px;
+  background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+              linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+              linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+table {
+  width: 100%;
+  background-color: rgba(9, 113, 161, 0.629);
+  color: rgb(211, 219, 226);
+}
+th {
+  font-size: larger;
+  font-weight:bold;
+  padding: 20px;
+}
+td {
+  font-size: large;
+  padding: 20px;
+}
+tr:nth-child(even) {
+  background-color: rgba(180, 9, 171, 0.414);
+}
