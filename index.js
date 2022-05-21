@@ -53,6 +53,35 @@ app.get("/employees/:id", (req, res) => {
   });
 });
 
+
+
+// edit employee from the database using the id 
+app.put('/update-employee/:id', function(req, res) {
+  Employee.findByIdAndUpdate(
+      req.params.id,
+      {
+          $set: {
+                 firstname:req.body.firstname,
+                 lastname:req.body.lastname,
+                 email:req.body.email,
+                 job:req.body.job,
+                 department:req.body.department
+              },
+      },
+      {
+          new: true,
+      },
+      function(err, updateEmployee) {
+          if(err) {
+              res.send("Error Updating Employee");
+          }
+          else{
+              res.json(updateEmployee);
+          }
+      }
+  )
+})
+
 app.listen(3002, () => {
   console.log("Server is running on port 3002");
 });
