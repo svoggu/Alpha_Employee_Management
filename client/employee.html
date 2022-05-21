@@ -17,19 +17,19 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="CSS/style.css" />
-    <script defer src="JS/main.js"></script>
+    <script defer src="./JS/main.js"></script>
   </head>
 
   <body>
     <button style="background-color: rgba(0,255,0,.8); border: none; "><a  href="./navigation.html">Home</a></button>
     <h1 class="col-mt-3 pt-5 d-flex justify-content-center">Employee Form</h1>
     <div class="Employee pt-4 d-flex justify-content-center">
-      <form>
+      <form id="press">
         <input
           type="text"
           placeholder="Firstname"
           class="col-mt-5 d-flex justify-content-center"
-          id="inputText"
+          id="inputFirst"
           size="50"
           required
         /><br />
@@ -38,7 +38,7 @@
           type="text"
           placeholder="Lastname"
           class="col-mt-5 d-flex justify-content-center"
-          id="inputText"
+          id="inputLast"
           size="50"
           required
         /><br />
@@ -47,7 +47,7 @@
           type="text"
           placeholder="Email"
           class="col-mt-5 d-flex justify-content-center"
-          id="inputText"
+          id="inputEmail"
           size="50"
           required
         /><br />
@@ -57,7 +57,7 @@
           textarea=""
           placeholder="Job"
           class="col-mt-5 d-flex justify-content-center"
-          id="inputText"
+          id="inputJob"
           size="50"
           required
         /><br />
@@ -66,7 +66,7 @@
           type="text"
           placeholder="Department"
           class="col-mt-5 d-flex justify-content-center"
-          id="inputText"
+          id="inputDep"
           size="50"
           required
         />
@@ -74,7 +74,7 @@
         <div class="button sumbit pt-5 d-flex justify-content-center">
           <button 
             type="submit"
-            class="press"
+            value="submit"
           >
             Add Employee
           </button>
