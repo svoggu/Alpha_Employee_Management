@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import { Employee } from "./employee.schema.js";
+import { User } from "./user.schema.js";
 
 const app = express();
 app.use(cors());
@@ -88,6 +89,26 @@ app.delete('/delete-employee/:id', function(req, res) {
       res.json({data});
   });
 })
+
+//create user profile 
+app.post("/create-user", function (req, res) {
+  const { username, email, password } = req.body;
+  const user = new User ({
+    username,
+    email,
+    password
+  });
+
+user
+    .save()
+    .then((data) => {
+      res.json({ data });
+    })
+    .catch((err) => {
+      res.status(501);
+      res.json({ errors: err });
+    });
+});
 
 app.listen(3002, () => {
   console.log("Server is running on port 3002");
