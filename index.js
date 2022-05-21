@@ -53,6 +53,16 @@ app.get("/employees/:id", (req, res) => {
   });
 });
 
+// delete employee from the database using id 
+app.delete('/delete-employee/:id', function(req, res) {
+  const _id = req.params.id;
+  Employee.findByIdAndDelete(_id).then((data) => {
+      console.log(data);
+      res.json({data});
+  });
+})
+
+
 app.listen(3002, () => {
   console.log("Server is running on port 3002");
 });
