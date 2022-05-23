@@ -54,52 +54,51 @@ app.get("/employees/:id", (req, res) => {
   });
 });
 
-// edit employee from the database using the id 
-app.put('/update-employee/:id', function(req, res) {
+// edit employee from the database using the id
+app.put("/update-employee/:id", function (req, res) {
   Employee.findByIdAndUpdate(
-      req.params.id,
-      {
-          $set: {
-                 firstname:req.body.firstname,
-                 lastname:req.body.lastname,
-                 email:req.body.email,
-                 job:req.body.job,
-                 department:req.body.department
-              },
+    req.params.id,
+    {
+      $set: {
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
+        email: req.body.email,
+        job: req.body.job,
+        department: req.body.department,
       },
-      {
-          new: true,
-      },
-      function(err, updateEmployee) {
-          if(err) {
-              res.send("Error Updating Employee");
-          }
-          else{
-              res.json(updateEmployee);
-          }
+    },
+    {
+      new: true,
+    },
+    function (err, updateEmployee) {
+      if (err) {
+        res.send("Error Updating Employee");
+      } else {
+        res.json(updateEmployee);
       }
-  )
-})
+    }
+  );
+});
 
-// delete employee from the database using id 
-app.delete('/delete-employee/:id', function(req, res) {
+// delete employee from the database using id
+app.delete("/delete-employee/:id", function (req, res) {
   const _id = req.params.id;
   Employee.findByIdAndDelete(_id).then((data) => {
-      console.log(data);
-      res.json({data});
+    console.log(data);
+    res.json({ data });
   });
-})
+});
 
-//create user profile 
+//create user profile
 app.post("/create-user", function (req, res) {
   const { username, email, password } = req.body;
-  const user = new User ({
+  const user = new User({
     username,
     email,
-    password
+    password,
   });
 
-user
+  user
     .save()
     .then((data) => {
       res.json({ data });
@@ -107,6 +106,25 @@ user
     .catch((err) => {
       res.status(501);
       res.json({ errors: err });
+    });
+});
+
+//login user
+app.get("/login", function (req, res) {
+  const { username, password } = req.body;
+
+  User.findOne({ username })
+    .then((user) => {
+      if (!user) {
+        res.status(401).json({ message: "User Not Found" });
+      } else if (user.password !== password) {
+        res.status(401).json({ message: "Incorrect Password" });
+      } else {
+        res.status(200).json({ message: "Login Successful" });
+      }
+    })
+    .catch((err) => {
+      res.json({ err });
     });
 });
 
