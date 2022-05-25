@@ -1,0 +1,54 @@
+body {
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+                linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+                linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+img {
+    height: 70px;
+    padding-top: 30px;
+}
+
+form h1 {
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+}
+
+input{
+    display:block;
+    width: 350px;
+    height: 40px;
+    margin: 30px;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    border-bottom: 2px solid black;
+    background: transparent;
+}
+
+button{
+    width: 350px;
+    height: 40px;
+    font-size: 25px;
+    background-color: rgba(9, 0, 128, 0.74);
+    border: none;
+    color: rgba(245, 245, 245, 0.897);
+    margin-top: 30px;
+}
+
+::placeholder {
+    color: rgba(0, 0, 0, 0.336);;
+}
+
