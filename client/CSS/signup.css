@@ -4,25 +4,26 @@ body {
                 linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 1000px;
 }
 img {
-    height: 70px;
+    height: 50px;
     padding-top: 30px;
 }
 
 form h1 {
-    font-size: 45px;
-    margin-bottom: 30px;
+    /* font-size: 45px; */
+    /* margin-bottom: 30px; */
+    color: #fff
 }
 
 form {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 40px;
+    /* margin-top: 40px; */
     box-sizing: border-box;
-    padding: 10px;
+    /* padding: 10px; */
     text-align: center;
 }
 
@@ -30,25 +31,37 @@ input{
     display:block;
     width: 350px;
     height: 40px;
-    margin: 30px;
+    margin: 10px;
     border: none;
     outline: none;
-    font-size: 25px;
-    border-bottom: 2px solid black;
+    font-size: 15px;
+    border-bottom: 2px solid white;
     background: transparent;
 }
 
-button{
+.btn{
     width: 350px;
     height: 40px;
-    font-size: 25px;
+    font-size: 15px;
     background-color: rgba(9, 0, 128, 0.74);
     border: none;
     color: rgba(245, 245, 245, 0.897);
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 60px;
 }
 
 ::placeholder {
     color: rgba(0, 0, 0, 0.336);;
 }
 
+.signupform{
+    width: 50%;
+    border-radius: 20px;
+    text-align: center;
+    margin-left: 25%;
+    margin-top: 70px;
+    box-shadow:  7px  7px 20px rgba(0, 0, 0, 0.2);
+     background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+                 linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+                 linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+}
