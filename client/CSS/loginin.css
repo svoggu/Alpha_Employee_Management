@@ -20,9 +20,14 @@ body{
                  linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
                  linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
 }
-.userIcon{
+/* .userIcon{
     font-size: 50px;
     padding: 15px 0;
+} */
+
+img {
+    height: 50px;
+    padding-top: 30px;
 }
 .logCommonColor{
     color: #3ED0B2;
@@ -39,12 +44,13 @@ body{
 .submit{
     width: 80px;
     height: 40px;
-    background-color: #3ED0B2;
+    background-color: rgba(9, 0, 128, 0.74);
     color: white;
     border: 0px;
     border-radius: 10px;
-    margin: 10px 0;
-}
+    margin: 10px;
+    margin-bottom: 50px;
+ }
 .submit:hover{
     background-color: #1FA363;
 }
@@ -58,3 +64,17 @@ body{
     box-shadow: -7px -7px 20px rgba(255, 255, 255, 0.7),
                  7px  7px 20px rgba(0, 0, 0, 0.2);
 }
+
+h1{
+    color: white;
+}
+/* .btn{
+    width: 350px;
+    height: 40px;
+    font-size: 15px;
+    background-color: rgba(9, 0, 128, 0.74);
+    border: none;
+    color: rgba(245, 245, 245, 0.897);
+    margin-top: 20px;
+    margin-bottom: 60px;
+} */
