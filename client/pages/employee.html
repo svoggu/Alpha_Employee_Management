@@ -16,12 +16,44 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+   
+    <link rel="stylesheet" href="../CSS/navigation.css">
     <link rel="stylesheet" href="../CSS/style.css" />
     <script defer type="module" src="../JS/employee.js"></script>
   </head>
 
   <body>
-    <button style="background-color: rgba(0,255,0,.8); border: none; "><a  href="./navigation.html">Home</a></button>
+    
+    <nav>
+      <div class="d-sm-flex justify-content-between border-dark bg-light p-3" role="navigation">
+          <div class="d-flex justify-content-start ">
+              <div class="mx-1 ">
+                  <h5><a aria-current="page" href="./navigation.html">Home</a></h5>
+              </div>
+              <div class="mx-3">
+                  <h5 class=""><a aria-current="page" href="./employee.html">Add Employee</a></h5>
+              </div>
+              <div class="mx-3">
+                  <h5 class=""><a aria-current="page" href="./employee-details.html">Employee Profiles</a></h5>
+              </div>
+          </div>
+          
+          <div class="d-flex justify-content-end">
+              <div class="mx-1">
+                  <h5 class=""><a aria-current="page" href="./signup.html">Signup</a></h5>
+              </div>
+              
+              <div class="mx-3">
+                  <h5 class=""><a aria-current="page" href="./loginpage.html">Login</a></h5>
+              </div>
+          </div>
+      </div>
+</nav>
+    <h1 class="col-mt-3 pt-5 d-flex justify-content-center">Employee Form</h1>
+   
+  </head>
+
+  <body>
     <div class="Employee pt-4 d-flex justify-content-center">
       <form name="employee_form" id="press">
         <h1 class="col-mt-3 pt-5 d-flex justify-content-center">Employee Form</h1><br><br>

@@ -1,6 +1,6 @@
 body{
-    font-family: times, verdana;
-    padding: 40px;
+    /* font-family: times, verdana; */
+    /* padding: 40px; */
     background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
                 linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
                 linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
@@ -10,6 +10,7 @@ body{
 
 }
 .loginform{
+    font-family: times, verdana;
     width: 50%;
     border-radius: 20px;
     text-align: center;
@@ -26,7 +27,7 @@ body{
 } */
 
 img {
-    height: 50px;
+    height: 80px;
     padding-top: 30px;
 }
 .logCommonColor{
