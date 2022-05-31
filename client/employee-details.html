@@ -1,36 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="CSS/employee-detail.css">
-  <!-- Bootstrap 5 CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-    
-</head>
+    <link rel="stylesheet" href="CSS/employee-detail.css" />
+    <!-- Bootstrap 5 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+  </head>
   <body>
-    <button style="background-color: rgba(0,255,0,.8); border: none; "><a  href="./navigation.html">Home</a></button>
-    <table>
-    <!--Table Header-->
+    <button style="background-color: rgba(0, 255, 0, 0.8); border: none">
+      <a href="./navigation.html">Home</a>
+    </button>
+    <table id="table_to_highlight">
+      <!--Table Header-->
       <thead>
-    <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Email</th>
-      <th>Job</th>
-      <th>Department</th>
-      <th>Edit</th>
-      <th>Delete</th>
-    </tr>
-  </thead>
-    <!--Employee Info-->
-    <tbody>
-  </tbody>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Job</th>
+          <th>Department</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <!--Employee Info-->
+      <tbody></tbody>
+    </table>
+    <dialog id="favDialog">
+      <form method="dialog" id="press">
+        <section>
+          <input
+            type="text"
+            placeholder="Firstname"
+            class="col-mt-5 d-flex justify-content-center"
+            id="inputFirst"
+            size="50"
+            required
+          /><br />
 
-</table>
-<script src='./JS/employee-details.js'></script>
-</body>
+          <input
+            type="text"
+            placeholder="Lastname"
+            class="col-mt-5 d-flex justify-content-center"
+            id="inputLast"
+            size="50"
+            value=""
+            required
+          /><br />
+
+          <input
+            type="text"
+            placeholder="Email"
+            class="col-mt-5 d-flex justify-content-center"
+            id="inputEmail"
+            size="50"
+            value=""
+            required
+          /><br />
+
+          <input
+            type="text"
+            textarea=""
+            placeholder="Job"
+            class="col-mt-5 d-flex justify-content-center"
+            id="inputJob"
+            size="50"
+            value=""
+            required
+          /><br />
+
+          <input
+            type="text"
+            placeholder="Department"
+            class="col-mt-5 d-flex justify-content-center"
+            id="inputDep"
+            size="50"
+            value=""
+            required
+          />
+        </section>
+        <menu>
+          <button id="cancel" type="reset">Cancel</button>
+          <button type="submit">Save</button>
+        </menu>
+      </form>
+    </dialog>
+    <script src="./JS/employee-details.js"></script>
+  </body>
 </html>
-
