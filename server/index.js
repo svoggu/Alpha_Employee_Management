@@ -1,8 +1,8 @@
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
-import { Employee } from "./employee.schema.js";
-import { User } from "./user.schema.js";
+import { Employee } from "./schema/employee.schema.js";
+import { User } from "./schema/user.schema.js";
 
 const app = express();
 app.use(cors());
