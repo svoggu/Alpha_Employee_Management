@@ -1,10 +1,12 @@
 //This is to get Employee Details from the database and post in the table
-fetch("http://localhost:3002/employees")
-  .then((res) => res.json())
-  .then((employees) => {
-    employees.data.forEach((employee) => {
-      const tr = document.createElement("tr");
-      tr.innerHTML = `<td>${employee.firstname}</td>
+import { apiService as api} from '../api/api.js';
+ //This is to get Employee Details from the database and post in the table
+api.get('employees')
+.then((employees) => {
+  employees.data.forEach(employee=> {
+       const tr=document.createElement('tr')
+       tr.innerHTML=
+       `<td>${employee.firstname}</td>
        <td>${employee.lastname}</td>
        <td>${employee.email}</td>
        <td>${employee.job}</td>
