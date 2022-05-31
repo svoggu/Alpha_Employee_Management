@@ -1,6 +1,6 @@
-
+import { apiService as api} from '../api/api.js';
  //This is to get Employee Details from the database and post in the table
-fetch('http://localhost:3002/employees').then((res)=> res.json())
+api.get('employees')
 .then((employees) => {
   employees.data.forEach(employee=> {
        const tr=document.createElement('tr')
