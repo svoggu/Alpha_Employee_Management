@@ -9,12 +9,14 @@ body {
 img {
     height: 80px;
     padding-top: 30px;
-}
+    }
 
 form h1 {
     /* font-size: 45px; */
     /* margin-bottom: 30px; */
-    color: #fff
+    color: #fff;
+    font-family :times, verdana;
+    font-weight: 500;
 }
 
 form {
@@ -34,7 +36,7 @@ input{
     margin: 10px;
     border: none;
     outline: none;
-    font-size: 15px;
+    /* font-size: 20px; */
     border-bottom: 2px solid white;
     background: transparent;
 }
