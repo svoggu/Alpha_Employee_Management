@@ -1,4 +1,3 @@
-//This is to get Employee Details from the database and post in the table
 import { apiService as api} from '../api/api.js';
  //This is to get Employee Details from the database and post in the table
 api.get('employees')
