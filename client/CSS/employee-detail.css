@@ -1,3 +1,5 @@
+
+
 body {
   /* padding: 40px; */
   background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
@@ -25,3 +27,5 @@ td {
 tr:nth-child(even) {
   background-color: rgba(180, 9, 171, 0.414);
 }
+
+

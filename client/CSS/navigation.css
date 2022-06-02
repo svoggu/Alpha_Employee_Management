@@ -17,6 +17,10 @@ h5>a {
          
 }
 
+ul>li{
+    list-style-type: none;
+    display: inline-block;
+}
 a:hover {
     background-color:  #af3 ;
     text-decoration: unset;
