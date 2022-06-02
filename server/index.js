@@ -110,7 +110,7 @@ app.post("/create-user", function (req, res) {
 });
 
 //login user
-app.get("/login", function (req, res) {
+app.post("/login", function (req, res) {
   const { username, password } = req.body;
 
   User.findOne({ username })

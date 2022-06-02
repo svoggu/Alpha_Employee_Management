@@ -1,6 +1,6 @@
 import { apiService as api} from '../api/api.js';
 
-document.getElementById('loginbuttton').addEventListener('submit', loginform)
+document.getElementById('loginform').addEventListener('submit', loginform)
 
 function loginform(event){
   event.preventDefault();
@@ -10,7 +10,7 @@ function loginform(event){
   
  
   
-  api.post('login-user', {
+  api.post('login', {
      username:username, 
      password:password, 
   })
@@ -19,5 +19,5 @@ function loginform(event){
 }
 
   function removeDetails(){
-    document.login_page.reset();
+    document.loginForm.reset();
 }

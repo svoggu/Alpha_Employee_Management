@@ -53,6 +53,7 @@ function showModal(employee) {
 
   document.getElementById("press").addEventListener("submit", function (event) {
     updateEmployee(event, employee._id);
+  
   });
 }
 
@@ -66,28 +67,29 @@ function updateEmployee(event, id) {
   let job = document.getElementById("inputJob").value;
   let department = document.getElementById("inputDep").value;
 
-  fetch(`http://localhost:3002/update-employee/${id}`, {
-    method: "PUT",
-    headers: {
-      Accept: "application/json, text/plain, */*",
-      "Content-type": "application/json",
-    },
-    body: JSON.stringify({
+  // fetch(`http://localhost:3002/update-employee/${id}`, {
+  //   method: "PUT",
+  //   headers: {
+  //     Accept: "application/json, text/plain, */*",
+  //     "Content-type": "application/json",
+  //   },
+    // body: JSON.stringify(
+      api.put(`update-employee/${id}`,{
       firstname: firstname,
       lastname: lastname,
       email: email,
       job: job,
       department: department,
-    }),
-  })
-    .then(function (res) {
-      res.json();
-      location.reload()
     })
-    .catch((err) => {
-      console.log(err);
-    });
-}
+  }
+//     .then(function (res) {
+//       res.json();
+//       location.reload()
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+// }
 
 //employee_id is the Id from Mongo DB. It is the automated ID given for each entry into the database
 //location.reload is to reload the page.
@@ -95,8 +97,8 @@ function updateEmployee(event, id) {
 
 function remove(id) {
   if (confirm("Are you sure you want to delete this employee record?")) {
-    fetch("http://localhost:3002/delete-employee/" + id, {
-      method: "DELETE",
+    api.delete(`delete-employee/${id}`, {
+      // method: "DELETE",
     })
       .then((res) => res.json())
       .then(() => location.reload());
