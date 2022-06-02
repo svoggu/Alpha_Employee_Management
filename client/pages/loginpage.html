@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../CSS/navigation.css">
    <link rel="stylesheet" href="../CSS/loginin.css">
     <script src="https://kit.fontawesome.com/ace56c45df.js" crossorigin="anonymous"></script>
+    <script type = "module" defer src="../JS/loginpage.js"></script>
 </head>
 
 <nav class="navbar navbar-expand-md bg-light">
@@ -47,21 +48,23 @@
         </div>
       </div>
     </div>
-  </nav>
+</nav>
+
 <div class="loginform">
+  <form id="loginform" name="loginForm">
+  
     <img src="/client/Img/person-icon.png">
+  
     <h1>Login</h1>
-    <!-- <i class="fa-solid fa-id-badge">
-        <br>Login</i><br> -->
-    <input type="text" class="username" placeholder="Enter Username" required="true"></form><br>
-    <input type="text" class="password" placeholder="Enter Password" required="true"></form><br>
+
+    <input type="text" class="username" id="user"placeholder="Enter Username" required="true"><br>
+    <input type="text" class="password" id="password" placeholder="Enter Password" required="true"><br>
 
     <button type="submit" class="submit">Login</button>
 
-
+  </form>
 </div>
 
-<body>
     
 </body>
 </html>
