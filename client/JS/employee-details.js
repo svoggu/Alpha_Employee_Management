@@ -10,8 +10,8 @@ api.get('employees')
        <td>${employee.email}</td>
        <td>${employee.job}</td>
        <td>${employee.department}</td>
-       <td><button id="edit">Edit</button></td>
-       <td ><button class="del">Delete</button></td>`;
+       <td><button id="edit" style = "padding: 5px; color: green; font-weight:bold;" >Edit</button></td>
+       <td ><button class="del" style = "padding: 5px;color: red;font-weight:bold;">Delete</button></td>`;
 
       document.querySelector("tbody").appendChild(tr);
       console.log(tr);
@@ -23,6 +23,8 @@ api.get('employees')
       });
     });
   });
+
+  
 
 function showModal(employee) {
   let cancelButton = document.getElementById("cancel");

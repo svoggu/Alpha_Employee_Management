@@ -9,6 +9,10 @@ body {
   background-size: cover;
   height: 100%;
 }
+
+.nav_bar {
+  width: 100%;
+}
 table {
   width: 100%;
   background-color: rgba(9, 113, 161, 0.629);
@@ -18,7 +22,6 @@ th {
   font-size: larger;
   font-weight:bold;
   padding: 20px;
-  text-decoration: underline
 }
 td {
   font-size: large;
