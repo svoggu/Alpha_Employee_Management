@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup Form</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
@@ -15,31 +16,39 @@
 </head>
 <body>
    
-    <nav>
-        <div class="d-sm-flex justify-content-between border-dark bg-light p-3" role="navigation">
-            <div class="d-flex justify-content-start ">
-                <div class="mx-1 ">
-                    <h5><a aria-current="page" href="./navigation.html">Home</a></h5>
-                </div>
-                <div class="mx-3">
-                    <h5 class=""><a aria-current="page" href="./employee.html">Add Employee</a></h5>
-                </div>
-                <div class="mx-3">
-                    <h5 class=""><a aria-current="page" href="./employee-details.html">Employee Profiles</a></h5>
-                </div>
+    <nav class="navbar navbar-expand-md bg-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="material-symbols-outlined">
+                menu
+                </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item me-3">
+                <h5><a aria-current="page" href="./navigation.html">Home</a></h5>
+              </li>
+              <li class="nav-item me-3">
+               <h5><a  href="./employee.html">Add Employee</a></h5> 
+              </li>
+              <li class="nav-item">
+                <h5><a   href="./employee-details.html">Employee Profiles</a></h5>
+              </li>
+              
+            </ul>
+            <div class="d-flex">
+                <ul class="d-inline">
+                    <li class="nav-item me-3">
+                        <h5><a  href="./signup.html">Sign up</a></h5>
+                      </li>
+                      <li class="nav-item">
+                       <h5><a href="./loginpage.html">Login</a></h5> 
+                      </li>
+                </ul>
             </div>
-            
-            <div class="d-flex justify-content-end">
-                <div class="mx-1">
-                    <h5 class=""><a aria-current="page" href="./signup.html">Signup</a></h5>
-                </div>
-                
-                <div class="mx-3">
-                    <h5 class=""><a aria-current="page" href="./loginpage.html">Login</a></h5>
-                </div>
-            </div>
+          </div>
         </div>
-  </nav>
+      </nav>
   
     <!--Sign Up Form-->
     <form class="signupform">
