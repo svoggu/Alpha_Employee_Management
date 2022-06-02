@@ -16,9 +16,9 @@ api.post('create-user', {
     })
   
 
- // removeDetails()
+ removeDetails()
  }
 
- // function removeDetails(){
-  //     document.signupform.reset();
-   //      }
+ function removeDetails(){
+   document.signupform.reset();
+        }
