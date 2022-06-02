@@ -1,22 +1,24 @@
 import { apiService as api } from "../api/api.js";
 
-document.getElementById('logbtn').addEventListener('submit', addUser)
+document.getElementById('signupform').addEventListener('submit', addUser)
 
 function addUser(event){
   event.preventDefault();
 
-  let UserName = document.getElementById("inputUserName").value
+  let username = document.getElementById("inputUserName").value
   let email = document.getElementById("inputEmail").value
   let password = document.getElementById("inputPassword").value
   
-api.post("create-user", {
-        username:UserName, 
+api.post('create-user', {
+        username:username, 
         email:email, 
-        password:password})
+        password:password
+    })
   
-  removeDetails()
+
+ // removeDetails()
  }
 
-  function removeDetails(){
-    document.signupform.reset();
-  }
+ // function removeDetails(){
+  //     document.signupform.reset();
+   //      }
