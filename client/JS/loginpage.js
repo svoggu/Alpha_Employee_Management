@@ -1,12 +1,13 @@
 import { apiService as api} from '../api/api.js';
 
-document.getElementById('loginbuttton').addEventListener('submit', Login)
+document.getElementById('loginbuttton').addEventListener('submit', loginform)
 
-function addEmployee(event){
+function loginform(event){
   event.preventDefault();
 
   let username = document.getElementById("user").value
   let password = document.getElementById("password").value
+  
  
   
   api.post('login-user', {
