@@ -31,7 +31,7 @@ form {
 
 input{
     display:block;
-    width: 350px;
+    width: 50%;
     height: 40px;
     margin: 10px;
     border: none;
@@ -42,8 +42,8 @@ input{
 }
 
 .btn{
-    width: 350px;
-    height: 40px;
+    width: 40%;
+    padding: 10px;
     font-size: 15px;
     background-color: rgba(9, 0, 128, 0.74);
     border: none;
