@@ -69,13 +69,6 @@ function updateEmployee(event, id) {
   let job = document.getElementById("inputJob").value;
   let department = document.getElementById("inputDep").value;
 
-  // fetch(`http://localhost:3002/update-employee/${id}`, {
-  //   method: "PUT",
-  //   headers: {
-  //     Accept: "application/json, text/plain, */*",
-  //     "Content-type": "application/json",
-  //   },
-    // body: JSON.stringify(
       api.put(`update-employee/${id}`,{
       firstname: firstname,
       lastname: lastname,
@@ -84,18 +77,7 @@ function updateEmployee(event, id) {
       department: department,
     })
   }
-//     .then(function (res) {
-//       res.json();
-//       location.reload()
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//     });
-// }
 
-//employee_id is the Id from Mongo DB. It is the automated ID given for each entry into the database
-//location.reload is to reload the page.
-//the way event listener works with HTML is different from how it operates in Javascript review code for better explanation
 
 function remove(id) {
   if (confirm("Are you sure you want to delete this employee record?")) {
