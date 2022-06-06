@@ -20,7 +20,8 @@ function addEmployee(event){
         department:department
   })
   
-    removeDetails()
+    removeDetails();
+    window.location.href = "./employee-details.html";
 }
 
  //clear user input

@@ -14,7 +14,7 @@ api.get('employees')
        <td ><button class="del" style = "padding: 5px;color: red;font-weight:bold;">Delete</button></td>`;
 
       document.querySelector("tbody").appendChild(tr);
-      console.log(tr);
+      // console.log(tr);
       tr.querySelector("#edit").addEventListener("click", function () {
         showModal(employee);
       });
