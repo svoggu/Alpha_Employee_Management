@@ -8,16 +8,18 @@ function loginform(event){
   let username = document.getElementById("user").value
   let password = document.getElementById("password").value
   
- 
-  
+ if(
   api.post('login', {
      username:username, 
      password:password, 
-  })
-  
-    removeDetails()
+  })){
+    alert("Login Successful");
+    removeDetails();
+    window.location.href = "./employee-details.html";
+  }
+
 }
 
-  function removeDetails(){
+function removeDetails(){
     document.loginForm.reset();
 }
