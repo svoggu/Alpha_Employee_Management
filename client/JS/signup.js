@@ -15,8 +15,8 @@ api.post('create-user', {
         password:password
     })
   
-
  removeDetails()
+ window.location.href = "./login.html";
  }
 
  function removeDetails(){
