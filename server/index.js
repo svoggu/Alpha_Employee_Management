@@ -17,7 +17,7 @@ mongoose
   })
   .catch((err) => console.log("Failed to Connect to DB", err));
 
-app.post("/create-employee", function (req, res) {
+app.post("/api/create-employee", function (req, res) {
   const { firstname, lastname, email, job, department } = req.body;
   const emp = new Employee({
     firstname,
@@ -38,7 +38,7 @@ app.post("/create-employee", function (req, res) {
     });
 });
 
-app.get("/employees", (req, res) => {
+app.get("/api/employees", (req, res) => {
   Employee.find()
     .then((data) => {
       res.json({ data });
@@ -48,7 +48,7 @@ app.get("/employees", (req, res) => {
     });
 });
 
-app.get("/employees/:id", (req, res) => {
+app.get("/api/employees/:id", (req, res) => {
   Employee.findById(req.params.id).then((data) => {
     res.json({ data });
     console.log(data);
@@ -56,7 +56,7 @@ app.get("/employees/:id", (req, res) => {
 });
 
 // edit employee from the database using the id
-app.put("/update-employee/:id", function (req, res) {
+app.put("/api/update-employee/:id", function (req, res) {
   Employee.findByIdAndUpdate(
     req.params.id,
     {
@@ -82,7 +82,7 @@ app.put("/update-employee/:id", function (req, res) {
 });
 
 // delete employee from the database using id
-app.delete("/delete-employee/:id", function (req, res) {
+app.delete("/api/delete-employee/:id", function (req, res) {
   const _id = req.params.id;
   Employee.findByIdAndDelete(_id).then((data) => {
     console.log(data);
@@ -91,7 +91,8 @@ app.delete("/delete-employee/:id", function (req, res) {
 });
 
 //create user profile
-app.post("/create-user", function (req, res) {
+app.post("/api/create-user", function (req, res) {
+  console.log("call create-user");
   const { username, email, password } = req.body;
   const user = new User({
     username,
@@ -111,7 +112,7 @@ app.post("/create-user", function (req, res) {
 });
 
 //login user
-app.post("/login", function (req, res) {
+app.post("/api/login", function (req, res) {
   const { username, password } = req.body;
 
   User.findOne({ username })
