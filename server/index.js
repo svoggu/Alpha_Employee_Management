@@ -3,6 +3,7 @@ import cors from "cors";
 import mongoose from "mongoose";
 import { Employee } from "./schema/employee.schema.js";
 import { User } from "./schema/user.schema.js";
+import path from "path";
 
 const app = express();
 app.use(cors());
@@ -132,3 +133,8 @@ app.listen(3002, () => {
   console.log("Server is running on port 3002");
 });
 
+app.all("*", function (req, res) {
+  const filePath = path.join(__dirname, '/client/navigation.html');
+  console.log(filePath);
+  res.sendFile(filePath);
+  });
