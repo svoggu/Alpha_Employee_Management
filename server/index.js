@@ -4,14 +4,26 @@ import mongoose from "mongoose";
 import { Employee } from "./schema/employee.schema.js";
 import { User } from "./schema/user.schema.js";
 import path from "path";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const port = process.env.PORT || 3002;
 
 const app = express();
+
+const __dirname = path.resolve();
+console.log(__dirname);
+
+const clientPath = path.join(__dirname, '/client');
+app.use(express.static(clientPath));
+
 app.use(cors());
 
 app.use(express.json());
 
 mongoose
-  .connect("mongodb://localhost:27017/alpha_employeedb")
+  .connect(`${process.env.MONGO_URI}`)
   .then(() => {
     console.log("Connected to DB Successfully");
   })
@@ -103,9 +115,11 @@ app.post("/api/create-user", function (req, res) {
   user
     .save()
     .then((data) => {
+      console.log(data)
       res.json({ data });
     })
     .catch((err) => {
+      console.log(err)
       res.status(501);
       res.json({ errors: err });
     });
@@ -130,12 +144,12 @@ app.post("/api/login", function (req, res) {
     });
 });
 
-app.listen(3002, () => {
-  console.log("Server is running on port 3002");
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
 
 app.all("*", function (req, res) {
-  const filePath = path.join(__dirname, '/client/navigation.html');
-  console.log(filePath);
+  const filePath = path.join(__dirname, '/client/pages/navigation.html');
+  // console.log('pagename',filePath);
   res.sendFile(filePath);
   });
