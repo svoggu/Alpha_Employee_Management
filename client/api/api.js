@@ -1,5 +1,5 @@
 export const apiService = {
-  baseUrl : process.env.HOST + "/api/",
+  baseUrl : location.origin + "/api/",
  async get(url) {
     return fetch(this.baseUrl + url).then((res) => res.json());
   },
