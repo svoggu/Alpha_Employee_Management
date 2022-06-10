@@ -1,5 +1,6 @@
 export const apiService = {
-  baseUrl : location.origin + "/api/",
+  
+  baseUrl : location.origin.includes('localhost') ? 'http://localhost:3002' : '' + "/api/",
  async get(url) {
     return fetch(this.baseUrl + url).then((res) => res.json());
   },
